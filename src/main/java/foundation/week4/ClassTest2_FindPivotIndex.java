@@ -1,4 +1,4 @@
-package foundation.week4.day1;
+package foundation.week4;
 
 import java.util.Arrays;
 

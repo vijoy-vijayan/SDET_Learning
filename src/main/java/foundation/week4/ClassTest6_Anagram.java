@@ -1,4 +1,4 @@
-package foundation.week4.day1;
+package foundation.week4;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ as we have total alphabets of 26
 
 */
 
-public class ClassTest5_ExcelSheetColumnNumber {
+public class ClassTest6_Anagram {
 	public int titleToNumber(String columnTitle) {
         int total=0;
         for(int i=columnTitle.length()-1;i>=0;i--)
