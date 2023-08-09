@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 
 
-public class HW17_ShortestDistanceToCharacter {
+public class HW18_ShortestDistanceToCharacter2 {
 
 	/* 
 Leetcode link: https://leetcode.com/problems/shortest-distance-to-a-character/description/
