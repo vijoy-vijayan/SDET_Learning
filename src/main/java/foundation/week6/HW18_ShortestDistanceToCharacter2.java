@@ -88,6 +88,7 @@ The distance between two indices i and j is abs(i - j), where abs is the absolut
 	
 	
 	//Iterated through separate For loops separately instead of Nested Loops
+	
 	public int[] leetCode_bestLogic_shortestToChar(String S, char C) {
         int n = S.length(), pos = -n, res[] = new int[n];
         for (int i = 0; i < n; ++i) {
