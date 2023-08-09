@@ -40,7 +40,7 @@ Method2:
  
  */
 
-public class Week2_HW9_RemoveTargetElement {
+public class Week2_HW6_RemoveTargetElement {
 	
 	@Test
 	public void positiveTest()

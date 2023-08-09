@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/power-of-three/description/
+
 Problem statement: 
  
 Given an integer n, return true if it is a power of three. Otherwise, return false.
@@ -29,7 +31,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW1_POwerof3 {
+public class Week2_HW10_POwerof3 {
 	
 	@Test
 	public void positiveTest()

@@ -7,6 +7,10 @@ import org.junit.Assert;
 
 
 /*
+ 
+Link: https://leetcode.com/problems/excel-sheet-column-number/
+
+
 Pseudo Code:
 1. Get the String and iterate through its length.. total=0
 2. Get Each character at a time and find out its actual value in ASCII and convert to number 

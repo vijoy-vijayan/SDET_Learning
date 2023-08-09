@@ -5,9 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW10_IntersectionOfArray {
+public class Week3_Day2_HW10_IntersectionOfArray {
 
 	/*
+
+Link: https://leetcode.com/problems/intersection-of-two-arrays/description/
 
 Problem statement: 	 
 Given two integer arrays nums1 and nums2, return an array of their intersection. 

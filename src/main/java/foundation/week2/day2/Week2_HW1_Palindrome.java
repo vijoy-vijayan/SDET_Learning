@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+ 
+Link : https://leetcode.com/problems/palindrome-number/description/
+
 Problem statement: 
  Given an integer x, return true if x is a palindrome and false otherwise.
  
@@ -25,7 +28,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW4_Palindrome {
+public class Week2_HW1_Palindrome {
 	
 	@Test
 	public void positiveTest()

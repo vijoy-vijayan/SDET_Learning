@@ -5,9 +5,10 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW8_Maximum69 {
+public class Week3_Day2_HW8_Maximum69 {
 
 	/*
+Link: https://leetcode.com/problems/maximum-69-number/description/
 
 Problem statement: 	 
 You are given a positive integer num consisting only of digits 6 and 9.

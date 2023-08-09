@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+
+Link : https://leetcode.com/problems/power-of-two/
+
 Problem statement: 
  
 Given an integer n, return true if it is a power of two. Otherwise, return false.
@@ -30,7 +33,7 @@ Pseudo Code:
  
  */
 
-public class Week2_CW2_PowerOf2 {
+public class Week2_CW1_PowerOf2 {
 	
 	@Test
 	public void positiveTest()

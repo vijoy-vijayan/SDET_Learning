@@ -7,9 +7,11 @@ import org.junit.Assert;
 
 
 
-public class HW1_JewelsAndStones {
+public class Week3_Day2_HW1_JewelsAndStones {
 
 	/* 
+Link: https://leetcode.com/problems/jewels-and-stones/description/
+
 Problem statement: 	 
 
 Hercy wants to save money for his first car. He puts money in the Leetcode bank every day.

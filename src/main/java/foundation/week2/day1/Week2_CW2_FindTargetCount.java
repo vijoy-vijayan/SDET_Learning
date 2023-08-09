@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+ Link :  https://leetcode.com/problems/unique-number-of-occurrences/
+ 
  Problem statement: 
  * Given a sorted array arr[] and a number x, write a function that counts the occurrences of x in arr[]. 
  * arr[] = {1, 1, 2, 2, 2, 2, 3,}, x = 2 output = 4

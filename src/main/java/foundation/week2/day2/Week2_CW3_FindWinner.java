@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+ * 
+ Link: https://leetcode.com/problems/count-of-matches-in-tournament/description/
+ 
 Problem statement: 
 
 You are given an integer n, the number of teams in a tournament that has strange rules:

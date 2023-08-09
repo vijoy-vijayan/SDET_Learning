@@ -5,6 +5,8 @@ import org.junit.Test;
 
 /* 
 
+Link:https://leetcode.com/problems/arranging-coins/description/
+
 Problem Statement:
 	 You have n coins and you want to build a staircase with these coins. 
 	 The staircase consists of k rows where the ith row has exactly i coins. 

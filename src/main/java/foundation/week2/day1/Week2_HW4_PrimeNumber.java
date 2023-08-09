@@ -3,9 +3,11 @@ package foundation.week2.day1;
 import org.junit.Assert;
 import org.junit.Test;
 
-class Week2_HW2_PrimeNumber {
+class Week2_HW4_PrimeNumber {
 	
-	/* Question: Check if the given number is prime or not
+	/* 
+ 
+Problem Statement: Check if the given number is prime or not
 	 * 
 	 * Input: an Integer
 	 * 

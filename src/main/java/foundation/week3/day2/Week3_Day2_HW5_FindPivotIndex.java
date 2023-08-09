@@ -5,9 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW6_ReplaceAllDigits {
+public class Week3_Day2_HW5_FindPivotIndex {
 
 	/*
+
+Link: https://leetcode.com/problems/find-pivot-index/description/
 
 Problem statement: 	 
 Given an array of integers nums, calculate the pivot index of this array.
@@ -39,26 +41,48 @@ Pseudo Code:
 
 	 */
 
-	public boolean isAnagram(String s, String t) {
+	@Test
+	public void positiveTest()
+	{
+		Assert.assertEquals(3, getPivotIndex(new int[] {1,7,3,6,5,6}));
+	}
 
-        char[] originalArr=s.toCharArray();
+	@Test
+	public void negativeTest()
+	{
+		Assert.assertEquals(-1, getPivotIndex(new int[] {1,2,3}));
+	}
 
-        char[] searchArr=t.toCharArray();
+	@Test
+	public void edgeTest()
+	{
+		Assert.assertEquals(0, getPivotIndex(new int[] {2,1,-1}));
+	}
 
-        Arrays.sort(originalArr);
-        Arrays.sort(searchArr);
+	public int getPivotIndex(int[] inputArr)	
+	{
 
-        if(originalArr.length!=searchArr.length)
-            return false;
+		int leftSum,rightSum;
+		for (int i = 0;i<inputArr.length;i++) {
 
-        for(int i=0;i<searchArr.length;i++)
-        {
-            if(originalArr[i]!=searchArr[i])
-                return false;
-        }
-        
-        return true;
-    }
+			leftSum=rightSum=0;
+
+			for (int j = 0; j < inputArr.length; j++) {
+
+				if(i>j)
+					leftSum=leftSum+inputArr[j];
+
+				if(i<j)
+					rightSum=rightSum+inputArr[j];
+
+			}
+
+			if(leftSum==rightSum)
+				return i;
+		}			
+
+		return -1;
+	}
 
 }
 

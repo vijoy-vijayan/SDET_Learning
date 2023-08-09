@@ -55,7 +55,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW7_FindXPlusOne {
+public class Week2_HW4_FindXPlusOne {
 	
 	@Test
 	public void positiveTest()

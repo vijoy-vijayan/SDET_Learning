@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/find-first-palindromic-string-in-the-array/description/
+
 Problem statement: 
 Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
 

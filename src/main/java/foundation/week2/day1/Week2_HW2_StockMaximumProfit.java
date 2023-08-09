@@ -3,9 +3,13 @@ package foundation.week2.day1;
 import org.junit.Assert;
 import org.junit.Test;
 
-class Week2_HW3_StockMaximumProfit {
+class Week2_HW2_StockMaximumProfit {
 	
-	/* Question: 
+	/* 
+
+Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+
+Question: 
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
 You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.

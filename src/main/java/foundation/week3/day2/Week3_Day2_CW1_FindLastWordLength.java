@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/length-of-last-word/
+
 Problem statement: 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
@@ -35,7 +37,7 @@ Pseudo Code:
  
  */
 
-public class Week3_CW4_FindLastWordLength {
+public class Week3_Day2_CW1_FindLastWordLength {
 	
 //	@Test
 //	public void positiveTest()

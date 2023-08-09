@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/single-number/description/
+
 Problem statement: 
  Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
@@ -30,7 +32,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW5_SingleNumber {
+public class Week2_HW2_SingleNumber {
 	
 	@Test
 	public void positiveTest()

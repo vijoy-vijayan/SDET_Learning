@@ -5,6 +5,8 @@ import org.junit.Test;
 
 
 /* 
+Link: https://leetcode.com/problems/squares-of-a-sorted-array/
+
 Problem statement: 
  Given an integer array nums sorted in non-decreasing order, 
  return an array of the squares of each number sorted in non-decreasing order.
@@ -28,7 +30,7 @@ Idea: Always the negative number square is also going to be positive. So we can 
 
  */
 
-public class Week2_HW2_SquaresOfArray {
+public class Week2_HW9_SquaresOfArray {
 
 	@Test
 	public void positiveTest()

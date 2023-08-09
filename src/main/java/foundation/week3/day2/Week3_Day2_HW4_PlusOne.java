@@ -5,10 +5,12 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW4_PlusOne {
+public class Week3_Day2_HW4_PlusOne {
 
 	/*
-
+	
+	Link: https://leetcode.com/problems/plus-one/description/
+	
 	Problem statement: 	 
 	You are given a large integer represented as an integer array digits, 
 	where each digits[i] is the ith digit of the integer. 

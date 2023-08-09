@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+
+Link: https://leetcode.com/problems/two-sum/description/
+
 Problem statement: 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -29,7 +32,7 @@ You can return the answer in any order.
  
  */
 
-public class Week2_CW1_TwoSum {
+public class Week2_CW2_TwoSum {
 	
 	@Test
 	public void positiveTest()

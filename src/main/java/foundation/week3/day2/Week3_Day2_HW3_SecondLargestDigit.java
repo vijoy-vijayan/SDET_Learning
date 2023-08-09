@@ -5,10 +5,12 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW3_SecondLargestDigit {
+public class Week3_Day2_HW3_SecondLargestDigit {
 
 	/*
-
+	
+	Link: https://leetcode.com/problems/second-largest-digit-in-a-string/description/
+	
 	Problem statement: 	 
 	Given an alphanumeric string s, return the second largest numerical digit 
 	that appears in s, or -1 if it does not exist.

@@ -6,6 +6,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /*
+
+Leet Code Link: https://leetcode.com/problems/contains-duplicate/description/  
+
+Problem Statement:
 Given an integer array nums, return true if any value appears at least twice in the array, 
 and return false if every element is distinct.
 

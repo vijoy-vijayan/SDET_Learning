@@ -5,10 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW2_MissingNumbers {
+public class Week3_Day2_HW2_MissingNumbers {
 	
 	/*
-
+	Link : https://leetcode.com/problems/missing-number/description/
+	
 	Problem statement: 	 
 	Given an array nums containing n distinct numbers in the range [0, n], 
 	return the only number in the range that is missing from the array.

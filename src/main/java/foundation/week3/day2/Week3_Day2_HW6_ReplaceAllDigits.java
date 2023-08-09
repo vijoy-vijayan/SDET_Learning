@@ -5,9 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW5_FindPivotIndex {
+public class Week3_Day2_HW6_ReplaceAllDigits {
 
 	/*
+
+Link : https://leetcode.com/problems/replace-all-digits-with-characters/description/
 
 Problem statement: 	 
 Given an array of integers nums, calculate the pivot index of this array.
@@ -39,48 +41,26 @@ Pseudo Code:
 
 	 */
 
-	@Test
-	public void positiveTest()
-	{
-		Assert.assertEquals(3, getPivotIndex(new int[] {1,7,3,6,5,6}));
-	}
+	public boolean isAnagram(String s, String t) {
 
-	@Test
-	public void negativeTest()
-	{
-		Assert.assertEquals(-1, getPivotIndex(new int[] {1,2,3}));
-	}
+        char[] originalArr=s.toCharArray();
 
-	@Test
-	public void edgeTest()
-	{
-		Assert.assertEquals(0, getPivotIndex(new int[] {2,1,-1}));
-	}
+        char[] searchArr=t.toCharArray();
 
-	public int getPivotIndex(int[] inputArr)	
-	{
+        Arrays.sort(originalArr);
+        Arrays.sort(searchArr);
 
-		int leftSum,rightSum;
-		for (int i = 0;i<inputArr.length;i++) {
+        if(originalArr.length!=searchArr.length)
+            return false;
 
-			leftSum=rightSum=0;
-
-			for (int j = 0; j < inputArr.length; j++) {
-
-				if(i>j)
-					leftSum=leftSum+inputArr[j];
-
-				if(i<j)
-					rightSum=rightSum+inputArr[j];
-
-			}
-
-			if(leftSum==rightSum)
-				return i;
-		}			
-
-		return -1;
-	}
+        for(int i=0;i<searchArr.length;i++)
+        {
+            if(originalArr[i]!=searchArr[i])
+                return false;
+        }
+        
+        return true;
+    }
 
 }
 

@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/move-zeroes/description/
+
 Problem statement: 
 Given an integer array nums, move all 0's to the end of it 
 while maintaining the relative order of the non-zero elements.
@@ -32,7 +34,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW3_MoveZeroes {
+public class Week2_HW8_MoveZeroes {
 	
 	@Test
 	public void positiveTest()

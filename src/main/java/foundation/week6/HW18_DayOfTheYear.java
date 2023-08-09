@@ -43,37 +43,47 @@ return the day number of the year.
 	}
 
 
-//	@Test	
-//	public void edgeTest()
-//	{
-//		Assert.assertArrayEquals(new int[] {4,3,2,1,0}, getShortestDistance("aaaab",'b'));
-//	}
+	//	@Test	
+	//	public void edgeTest()
+	//	{
+	//		Assert.assertArrayEquals(new int[] {4,3,2,1,0}, getShortestDistance("aaaab",'b'));
+	//	}
 
 	public short getDayOfTheYear(String date) {
-		
+
 		short res=0;
 
 		short[] daysOfMonth= {31,28,31,30,31,30,31,31,30,31,30,31};	
-		
+
 		String[] split = date.split("-");
-		
-		int givenYear=Integer.parseInt(split[0]);
-		int givenMonth=Integer.parseInt(split[1]);
-		int givenDays=Integer.parseInt(split[2]);
-		
-		for(byte i=1; i<givenMonth; i++)
-		{
+
+		short givenYear=Short.parseShort(split[0]);
+		short givenMonth=Short.parseShort(split[1]);
+		short givenDays=Short.parseShort(split[2]);
+
+		for(short i=1; i<givenMonth; i++)
 			res=(short) (res+daysOfMonth[i-1]);
+
+
+		if(givenMonth>2)
+		{
+			if(givenYear%100==0)
+			{
+				if(givenYear%400==0)
+					res++;
+			}
+			else if(givenYear%4==0)
+				res++;
 		}
 
-		
+
 
 		return (short) (res+givenDays);
 
 	}
-	
-	
-	
+
+
+
 
 
 

@@ -5,9 +5,11 @@ import java.util.Arrays;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW9_CountPrimes {
+public class Week3_Day2_HW9_CountPrimes {
 
 	/*
+
+Link: https://leetcode.com/problems/count-primes/description/
 
 Problem statement: 	 
 	Given an integer n, return the number of prime numbers that are strictly less than n.

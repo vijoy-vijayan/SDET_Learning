@@ -6,9 +6,11 @@ import java.util.Collections;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class HW7_UniqueNumberOfOccurences {
+public class Week3_Day2_HW7_UniqueNumberOfOccurences {
 
 	/*
+
+Link: https://leetcode.com/problems/unique-number-of-occurrences/description/
 
 Problem statement: 	 
 Given an array of integers nums, calculate the pivot index of this array.

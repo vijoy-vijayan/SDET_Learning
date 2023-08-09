@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
+Link: https://leetcode.com/problems/distribute-candies/description/
+
 Problem statement: 
 Alice has n candies, where the ith candy is of type candyType[i]. Alice noticed that she started to gain weight, so she visited a doctor.
 
@@ -34,7 +36,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW6_DistributeCandies {
+public class Week2_HW3_DistributeCandies {
 	
 	@Test
 	public void positiveTest()

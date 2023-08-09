@@ -4,7 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /* 
-HW5--> Problem statement: 
+HW5: https://leetcode.com/problems/add-digits/description/
+
+--> Problem statement: 
  Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
 
  
@@ -29,7 +31,7 @@ Pseudo Code:
  
  */
 
-public class Week2_HW8_SumOfDigits {
+public class Week2_HW5_SumOfDigits {
 	
 	@Test
 	public void positiveTest()
