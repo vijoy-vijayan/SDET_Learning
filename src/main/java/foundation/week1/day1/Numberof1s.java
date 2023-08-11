@@ -32,7 +32,7 @@ class Numberof1s {
 	@Test
 	void Positivetest() {
 		Assert.assertEquals(5,findNumberofOnes(new int[] {1,1,1,0,1,0,0,0,1}));
-		
+			
     }
 	
 	@Test
@@ -49,7 +49,7 @@ class Numberof1s {
 	}
 	
 	
-	public static int findNumberofOnes(int[] nums)
+	public int findNumberofOnes(int[] nums)
 	{
 		Arrays.sort(nums);
 
