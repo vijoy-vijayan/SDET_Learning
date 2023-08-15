@@ -1,4 +1,4 @@
-package foundation.week7;
+package foundation.week8;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.junit.Assert;
 
 
-public class Week6_Day5_HW_DayOfTheWeek{
+public class Week8_Day2_Self_XOR{
 
 	/* 
 Leetcode link: Mentor Given
@@ -36,40 +36,54 @@ input = number (Valid)
 	6. Return prod - sum
 
 
-*/
+	 */
 
 	@Test	
 	public void positiveTest()
 	{
-		Assert.assertEquals(14, getDifference_prodandSum(1234));
+		Assert.assertEquals(9, xorOperation(5,0));
 	}
 
 
-	@Test	
-	public void negativeTest()
-	{
-		Assert.assertEquals(-9, getDifference_prodandSum(9000));
-	}
+	//	@Test	
+	//	public void negativeTest()
+	//	{
+	//		Assert.assertEquals(-9, getDifference_prodandSum(9000));
+	//	}
+	//
+	//	@Test	
+	//	public void edgeTest()
+	//	{
+	//		Assert.assertEquals(0, getDifference_prodandSum(5));
+	//	}
 
-	@Test	
-	public void edgeTest()
-	{
-		Assert.assertEquals(0, getDifference_prodandSum(5));
-	}
 
-	public int getDifference_prodandSum(int input) {
+	public int xorOperation(int n, int start) {
 
-		int sum=0, prod=1,rem;
+		int nums[]=new int[n];
 
-		while(input>0)
+		nums[0] = start + 2 * 0;
+		int temp=nums[0];
+
+		for(int i=1; i<n;i++)
 		{
-			rem=input%10;
-			input = input/10;
-			sum=sum+rem;
-			prod=prod*rem;
+			nums[i] = start + 2 * i;
+			temp=temp^nums[i];
+
 		}
 
-		return prod-sum;
+		return temp;
+
 	}
 
+	public int xorOperation_Optimized(int n, int start) {
+
+		int temp=start + 2 * 0;;
+
+		for(int i=1; i<n;i++)
+			temp=temp^(start + (2 * i));
+
+		return temp;
+
+	}
 }
