@@ -78,7 +78,7 @@ input = number (Valid)
 
 	public int xorOperation_Optimized(int n, int start) {
 
-		int temp=start + 2 * 0;;
+		int temp=start + 2 * 0;
 
 		for(int i=1; i<n;i++)
 			temp=temp^(start + (2 * i));
