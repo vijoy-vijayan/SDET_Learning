@@ -29,13 +29,12 @@ Return the maximum number you can get by changing at most one digit (6 becomes 9
 
 
 	Pseudo Code:
-	1. Get the input and initialise sum=0, prod=1
-	2. Iterate through the input in while loop to separate digits with condition input>0
-	3. Calculate rem = input%10, input = input/10.. 
-	4. Update Sum and prod .. sum=sum+rem, prod=prod*rem
-	5. Repeat steps 2 to 4 until num becomes 0
-	6. Return prod - sum
-
+	1. Get the input and initialise ctr=0, tracker=0, actualNum=input
+	2. Handle the single digit number and return 9
+	3. Find the position of 6 using while loop and check for the presence of 6
+	4. Get the power of position and handle the logic by finding rem and quotient of power
+	4. Calculate the new value with formula res= Quotient +3 *  POwer of position.. 9969 - Q - 996+3, R- 9
+	5. Return Q+R
 
 	 */
 
@@ -94,11 +93,11 @@ Return the maximum number you can get by changing at most one digit (6 becomes 9
 
 		int temp=powerOfNum(rowTracker-1);
 
-		rem=actualNum%temp;
+		rem=actualNum%temp;//9969.. temp=10, rem=9
 
-		num=((actualNum/temp)+3)*temp;
+		num=((actualNum/temp)+3)*temp;//996+3 == 999 * 10 = 9990
 
-		return num+rem ;
+		return num+rem ;//9990+9
 
 	}
 
