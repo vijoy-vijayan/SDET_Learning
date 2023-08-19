@@ -19,13 +19,11 @@ Find if number is Spy number. A number whose sum of digits is equal to its produ
 	Input 			----->  int
 	Output 			----->  boolean
 
-
 	Data Set:
 		 Positive: 		---> Input: 132							Output =  True	 
 		 Positive: 		---> Input: 1124						Output =  True
 		 Negative: 		---> Input: 123							Output =  False
 		 Edge:  		---> Input: 5							Output = True
-
 
 
 	Pseudo Code:
@@ -40,7 +38,7 @@ Find if number is Spy number. A number whose sum of digits is equal to its produ
 	public void positiveTest()
 	{
 
-		//		Assert.assertEquals(4, getGoodPair(new int[] {1,2,3,1,1,3}));
+
 		Assert.assertEquals(true, getSpyNumber(132));
 		Assert.assertEquals(true, getSpyNumber(1124));
 	}
@@ -69,7 +67,7 @@ Find if number is Spy number. A number whose sum of digits is equal to its produ
 			prod*=rem;
 
 		}
-		
+
 		return sum==prod;
 
 	}
