@@ -50,7 +50,7 @@ public class Week2_CW1_FindDuplicate {
 		Assert.assertEquals(true,isDuplicatePresent(new int[] {1,2,3,4,5,1} ));
 	}
 
-
+	//O(N2)
 	public boolean isDuplicatePresent(int[] inputArr)
 	{
 		for(int i=0;i<inputArr.length-1;i++)

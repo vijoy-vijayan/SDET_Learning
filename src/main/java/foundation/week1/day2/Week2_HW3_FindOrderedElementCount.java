@@ -40,6 +40,7 @@ public class Week2_HW3_FindOrderedElementCount{
 		Assert.assertEquals(0,FindOrderedElementsCount(new int[] {9}));
 	}
 	
+	//O(N2)
 	public int FindOrderedElementsCount(int[] arrInput)
 	{
 		int ctr=0;

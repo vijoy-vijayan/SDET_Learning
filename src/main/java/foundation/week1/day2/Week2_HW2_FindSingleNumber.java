@@ -50,6 +50,7 @@ public class Week2_HW2_FindSingleNumber{
 		Assert.assertEquals(9,FindTheSingle(new int[] {9}));
 	}
 	
+	//O(N)
 	public int FindTheSingle(int[] arrInput)//4,1,2,1,2
 	{
 		Arrays.sort(arrInput);//1,1,2,2,4
