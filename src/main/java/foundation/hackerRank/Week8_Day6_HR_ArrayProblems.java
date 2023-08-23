@@ -68,7 +68,7 @@ public class Week8_Day6_HR_ArrayProblems {
 	
 	public static void learnArrayBehavior()
 	{
-		int[] primaryArray = {1,2,3};////789
+		int[] primaryArray = {1,2,3};
         int[] secondaryArray = primaryArray;///
         secondaryArray[2] = 5;
         
@@ -79,12 +79,20 @@ public class Week8_Day6_HR_ArrayProblems {
         
         System.out.println(Arrays.toString(primaryArray));
         System.out.println(Arrays.toString(secondaryArray));
+        
+        String[][] arr1= {{"a","b"},{"r"}};
+        
+        Integer[] arr2= {1,1};
+        System.out.println(arr1);
+        System.out.println(arr2);
 	}
 	
 	public static void exploreArrayClassMethods()
 	{
 		int[] primaryArray = {1,2,3};
         Arrays.toString(primaryArray);
+        
+        
         
         
         

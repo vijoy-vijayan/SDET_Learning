@@ -113,7 +113,6 @@ public class Week8_Day6_Practice_BigONotation{
 		System.out.println(counter);
 	}
 	
-	
 	public void Big_On_Logarithmic(int n)
 	{	
 		int counter=0;
@@ -205,7 +204,5 @@ public class Week8_Day6_Practice_BigONotation{
 	}
 
 
-
 	
-
 }

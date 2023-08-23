@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.junit.Assert;
 
 
-public class Week9_Day1_CanPLaceFlowers{
+public class Week9_Day1_HW_CanPlaceFlowers{
 
 	/* 
 Leetcode link: https://leetcode.com/problems/can-place-flowers/
@@ -64,8 +64,6 @@ return true if n new flowers can be planted in the flowerbed without violating t
 
 	public boolean canPlantFlowers(int[] flowerbed, int n) {
 
-		//[0,0,0],2
-		
 		if(n==0)
 			return true;
 		
@@ -87,20 +85,13 @@ return true if n new flowers can be planted in the flowerbed without violating t
 					n--;
 					i++;
 				}
-//				continue;
 			}
 			else if(i==flowerbed.length-1)
 			{
 				if((flowerbed[i]==0)&&(flowerbed[i-1]==0))
-				{
 					n--;
-				}
-//				if(n==0)
-//					return true;
-				
-//				continue;
 			}
-			else if(flowerbed[i]==0)
+			else if(flowerbed[i]==0)// 
 			{
 				if((flowerbed[i-1]==0)&&(flowerbed[i+1]==0))
 				{
