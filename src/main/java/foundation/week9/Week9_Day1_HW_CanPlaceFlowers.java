@@ -76,7 +76,7 @@ return true if n new flowers can be planted in the flowerbed without violating t
 			
 		}
 
-		for (int i = 0; i < flowerbed.length; i++) {
+		for (int i = 0; i < flowerbed.length; i++) {///0(N)
 
 			if(i==0)
 			{
