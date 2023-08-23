@@ -3,7 +3,7 @@ package foundation.week1.day1;
 import org.junit.Assert;
 import org.junit.Test;
 
-class PrimeNumberCount {
+public class PrimeNumberCount {
 	
 	/* Question: Check the count of prime number from the given integer
 	 * 
@@ -34,18 +34,18 @@ class PrimeNumberCount {
 	 */
 
 	@Test
-	void Positivetest() {
+	public void Positivetest() {
 		Assert.assertEquals(6,countPrimeNumbers(13));
 		Assert.assertEquals(15,countPrimeNumbers(51));
 	}
 	
 	@Test
-	void Negativetest() {
+	public void Negativetest() {
 		Assert.assertEquals(0,countPrimeNumbers(1));
 	}
 	
 	@Test
-	void Edgetest() {
+	public void Edgetest() {
 		Assert.assertEquals(0,countPrimeNumbers(0));
 	}
 	

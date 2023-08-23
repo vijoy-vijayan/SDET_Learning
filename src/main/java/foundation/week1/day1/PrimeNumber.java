@@ -3,7 +3,7 @@ package foundation.week1.day1;
 import org.junit.Assert;
 import org.junit.Test;
 
-class PrimeNumber {
+public class PrimeNumber{
 	
 	/* Question: Check if the given number is prime or not
 	 * 

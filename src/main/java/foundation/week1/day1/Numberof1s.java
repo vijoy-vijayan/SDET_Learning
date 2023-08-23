@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Test;
 
-class Numberof1s {
+public class Numberof1s {
 	
 	/* Problem: int[] nums = { 0, 0, 0, 1, 1, 1 };
 	Find the number of 1's present in the array without using a counter
