@@ -37,6 +37,8 @@ Find the number that occurs twice and the number that is missing and return them
         5. If flag is not set for any given iteration add that number of i to res array in res[1]
         6. Return res
 
+Best Solution: 
+https://leetcode.com/problems/set-mismatch/solutions/1089560/js-python-java-c-updated-easy-o-1-space-solution-w-explanation/
 	 */
 
 	@Test	
@@ -137,13 +139,13 @@ Find the number that occurs twice and the number that is missing and return them
 	}
 
 
-	public int[] findErrorNums_Updated(int[] nums) {
+	public int[] findErrorNums_Updated(int[] nums) {//O(N^2)
 
 		int[] res=new int[2];
 
-		Arrays.sort(nums);
+		Arrays.sort(nums);//O(N logN)
 
-		for(int i=0;i<nums.length-1;i++)
+		for(int i=0;i<nums.length-1;i++)//O(N)
 		{
 			if(nums[i]==nums[i+1])
 			{
@@ -155,7 +157,7 @@ Find the number that occurs twice and the number that is missing and return them
 		boolean flag=false;
 		int ctr=0;
 		
-		for(int i=1;i<=nums.length;i++)
+		for(int i=1;i<=nums.length;i++)//O(N^2)
 		{
 			if(i==res[0])
 				continue;
