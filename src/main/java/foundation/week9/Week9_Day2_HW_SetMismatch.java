@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.junit.Assert;
 
 
-public class Week9_Day1_MentorGiven_findErrorNum{
+public class Week9_Day2_HW_SetMismatch{
 
 	/* 
 Leetcode link: https://leetcode.com/problems/set-mismatch/
