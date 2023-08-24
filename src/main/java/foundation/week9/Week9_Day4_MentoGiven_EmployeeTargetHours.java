@@ -69,9 +69,9 @@ Return the integer denoting the number of employees who worked at least target h
 	public int getTargetReachedEmployees(int[] hours, int target) {//O(N)
 		
 		int ctr=0;
-		for (int i = 0; i < hours.length; i++) //O(N)
+		for (int eachHours:hours) //O(N)
 		{
-			if (hours[i] >= target)
+			if (eachHours >= target)
 				ctr++;
 		}
 		return ctr;
