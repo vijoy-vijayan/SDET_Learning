@@ -74,7 +74,10 @@ Each range [a,b] in the list should be output as:
 	}
 
 
-	public String[] getSummaryRanges(int[] nums) {//O(N logN)
+	public String[] getSummaryRanges(int[] nums) {//O(N)
+
+		if(nums.length==0)
+			return new String[0];
 		
 		int start_ctr=0, end_ctr=0;
 
@@ -82,7 +85,7 @@ Each range [a,b] in the list should be output as:
 
 		boolean flag=false;
 
-		while(nums.length-1>=end_ctr)
+		while(nums.length-1>=end_ctr)//O(N)
 		{
 			if(end_ctr!=nums.length-1) {
 				while (nums[end_ctr] + 1 == nums[end_ctr + 1]) {
