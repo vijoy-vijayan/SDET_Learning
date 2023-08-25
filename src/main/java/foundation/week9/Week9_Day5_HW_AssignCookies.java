@@ -42,6 +42,7 @@ output the maximum number.
 	5. Continue step 4 for all the elements of g[]
 	6. Return result at the end
 
+Best Solution: https://leetcode.com/problems/assign-cookies/solutions/93987/simple-greedy-java-solution/
 	 */
 
 	@Test	
