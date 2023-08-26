@@ -85,7 +85,7 @@ Each range [a,b] in the list should be output as:
 
 		boolean flag=false;
 
-		while(nums.length-1>=end_ctr)//O(N)
+		while(nums.length-1>=end_ctr)//O(N) ...... // 0,1,2,3,4,5
 		{
 			if(end_ctr!=nums.length-1) {
 				while (nums[end_ctr] + 1 == nums[end_ctr + 1]) {
