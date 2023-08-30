@@ -35,36 +35,37 @@ and ends at 3 (inclusive). The resulting string will be "dcbaefd".Return the res
     3. Reverse the substring1
     4. Return substring1+substring2;
 
+ Best Solution : https://leetcode.com/problems/reverse-prefix-of-word/solutions/1462197/java-easy-solution-beats-100/
 
 	 */
 
 	@Test
 	public void positiveTest()
 	{
-
 		Assert.assertEquals("salcsmate", reversePrefix("classmate",'s'));
-		//Assert.assertEquals(new String[]{"0->5"}, getSummaryRanges(new int[]{0,1,2,3,4,5}));
+		Assert.assertEquals("zpotpal", reversePrefix("laptopz",'z'));
 	}
 
 
-	/*@Test
+	@Test
 	public void negativeTest()
 	{
-		Assert.assertEquals(new String[]{"0->3","5"}, getSummaryRanges(new int[]{0,1,2,3,5}));
+		Assert.assertEquals("testleaf", reversePrefix("testleaf",'q'));
 	}
 
 	@Test
 	public void edgeTest()
 	{
-		Assert.assertEquals(new String[]{"0"}, getSummaryRanges(new int[]{0}));
-		Assert.assertEquals(new String[]{"0","9"}, getSummaryRanges(new int[]{0,9}));
-	}*/
+		Assert.assertEquals("vijoyvijayan", reversePrefix("vijoyvijayan",'v'));
+	}
+
+
+
 
 
 	public String reversePrefix(String word, char ch) {//O(N)
 
 		int firstIndex=word.indexOf(ch);
-
 
 		if(firstIndex>0)
 		{
