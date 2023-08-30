@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class Week10_Day4_HW_CellsInRange {
+public class Week10_Day3_HW_CellsInRange {
 
 	/* 
 Leetcode link: https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
