@@ -16,26 +16,28 @@ Given a balanced string s, split it into some number of substrings such that:
 Each substring is balanced. Return the maximum number of balanced strings you can obtain.
 
 
-	Input 			----->  String,String
-	Output 			----->  String
+	Input 			----->  String
+	Output 			----->  int
 
 
 	Data Set:
-		 Positive: 	---> Input: "mnop", "rstu"					Output =  "mrnsotpu"
-		 Negative: 	---> Input: "tester","dev"			Output =  "tdeesvter"
-		 Negative: 	---> Input: "bee","butterfly"			Output =  "bbeuetterfly"
-		 Edge:  ---> Input: "a","z"				Output =  "az"
+		 Positive: 	---> Input: "RLRRRLLRLL"					Output =  2
+		 Positive: 	---> Input: "RLRRLLRLRL"					Output =  4
+		 Negative: 	---> Input: "LRRLLLRRRRRRLLLLRRRLL"			Output =  4
+		 Edge:  	---> Input: "RL"							Output =  1
 
 
 
 	Pseudo Code:
-	1. Get the input string and initialise ctr=0, res="", trailingVal=""
-    2. Check for the longer string in the given two string using
-    	if len(str1)>len(str2) --> trailingvale=remainingpart(Substring(str1)), ctr=str2.lenght()
-    	else trailingval=remainingpart(Substring(str2)), ctr=str2.lenght(), ctr=str1.lenght()
-    3. Loop through the ctr and add each indexed character of both string and append with res
-    4. Return res+trailingVal
-
+	1. Get the input string and initialise ctr_first,ctr_second=1,ctr_resul=0 and flag=true
+	2. Loop through the characters and check for count of first character by condition --> if (flag)
+	3. CHeck for the match of i and i+1 .. If same increment the ctr1
+	4. If not matching, Set flag=false
+	5. Check for the count of second charcters in the else part of flag
+	6. If i ==i+1, increase the ctr2 and check for the match with first counter .. ctr1==ctr2
+	7. Reset all value of other ctrs to default and increment reult ctr by 1
+	8. Handle the edge condition effectively
+	9. Repeat for all characters and return the output
 
 	 */
 
@@ -43,44 +45,69 @@ Each substring is balanced. Return the maximum number of balanced strings you ca
 	public void positiveTest()
 	{
 
-		Assert.assertEquals("mrnsotpu", mergeString("mnop", "rstu"));
+
+		Assert.assertEquals(1, getCountofBalancedString("RRLL"));
+		Assert.assertEquals(2, getCountofBalancedString("RLRRRLLRLL"));
+		Assert.assertEquals(4, getCountofBalancedString("RLRRLLRLRL"));
 
 	}
 
-
+	
 	@Test
 	public void negativeTest()
 	{
-		Assert.assertEquals("tdeesvter", mergeString( "tester","dev"));
-		Assert.assertEquals("bbeuetterfly", mergeString( "bee","butterfly"));
+		Assert.assertEquals(5, getCountofBalancedString("LRRLLLRRRRRRLLLLRRRLLL"));
+
 	}
 
 	@Test
 	public void edgeTest()
 	{
-		Assert.assertEquals("az", mergeString( "a","z"));
+		Assert.assertEquals(1, getCountofBalancedString("RL"));
 	}
 
 
-	public String mergeString(String word1, String word2) {//O(N)
+	public int getCountofBalancedString(String s) {//RLRRLLRLRL
 
-		int ctr=0;
-		String TrailingVal="",MergedStr="";
+		int ctr_first=0,ctr_second=0,resultctr=0;
+		boolean flag=true;
 
-		if(word1.length()>word2.length())
-		{
-			TrailingVal=word1.substring(word2.length());
-			ctr=word2.length();
+		char[] charArr=s.toCharArray();
+
+		for (int i = 0; i < charArr.length; i++) {
+			if(flag)
+			{
+				ctr_first++;
+				if((i!= charArr.length-1)&&(charArr[i]!=charArr[i+1])) {
+					flag = false;
+				}
+			}
+			else {
+
+				ctr_second++;
+				if((i!= charArr.length-1)&&(charArr[i]!=charArr[i+1]))
+				{
+					if(ctr_first==ctr_second)
+						resultctr++;
+
+					ctr_first=ctr_second=0;
+					flag=true;
+
+				}
+				if(!flag&&(ctr_first==ctr_second)) {
+					resultctr++;
+					ctr_first=ctr_second=0;
+					flag=true;
+
+				}
+
+
+			}
+
+
 		}
-		else
-		{
-			TrailingVal=word2.substring(word1.length());
-			ctr=word1.length();
-		}
-		for(int i=0;i<ctr;i++)
-			MergedStr=MergedStr+word1.charAt(i)+word2.charAt(i);
 
-		return MergedStr.concat(TrailingVal);
+		return resultctr;
 	}
 
 }
