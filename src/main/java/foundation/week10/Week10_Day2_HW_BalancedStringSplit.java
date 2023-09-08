@@ -52,7 +52,7 @@ Each substring is balanced. Return the maximum number of balanced strings you ca
 
 	}
 
-	
+
 	@Test
 	public void negativeTest()
 	{

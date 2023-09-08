@@ -63,6 +63,9 @@ it contains only the first k words. Return s after truncating it.
 		String[] words=s.split(" ");
 
 		StringBuilder res=new StringBuilder();
+
+		(res.toString()).equals("kjhkjhkj");
+
 		for (int eachWord = 0; eachWord < k; eachWord++) {
 			res.append(words[eachWord]);
 
