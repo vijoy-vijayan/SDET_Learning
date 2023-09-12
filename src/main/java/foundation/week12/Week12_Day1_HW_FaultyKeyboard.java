@@ -38,9 +38,7 @@ Return the final string that will be present on your laptop screen.
 	4. Covert SB to string and return the result
 
 
-	Best Solution: https://leetcode.com/problems/sorting-the-sentence/solutions/1213443/java-simple-solution-runtime-0-ms-o-n/
-
-	Learning: Could have made use of Split array itself as we already have index in Input String
+	Learning: String Builder methods can be learnt better
 
 	 */
 
