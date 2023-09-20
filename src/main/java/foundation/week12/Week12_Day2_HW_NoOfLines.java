@@ -6,18 +6,20 @@ import org.junit.Test;
 import java.util.Arrays;
 
 
-public class Week12_Day2_HW_SplitBalancedString {
+public class Week12_Day2_HW_NoOfLines {
 
 	/* 
-Leetcode link: https://leetcode.com/problems/split-a-string-in-balanced-strings/description/
+Leetcode link: https://leetcode.com/problems/number-of-lines-to-write-string/description/
 
 Problem statement: 	
-Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
+You are given a string s of lowercase English letters and an array widths denoting how many pixels wide each lowercase English letter is. Specifically, widths[0] is the width of 'a', widths[1] is the width of 'b', and so on.
 
-Given a balanced string s, split it into some number of substrings such that:
+You are trying to write s across several lines, where each line is no longer than 100 pixels. Starting at the beginning of s, write as many letters on the first line such that the total width does not exceed 100 pixels. Then, from where you stopped in s, continue writing as many letters as you can on the second line. Continue this process until you have written all of s.
 
-Each substring is balanced.
-Return the maximum number of balanced strings you can obtain.
+Return an array result of length 2 where:
+
+result[0] is the total number of lines.
+result[1] is the width of the last line in pixels.
 
 
 	Input 			----->  int[]
@@ -32,11 +34,11 @@ Return the maximum number of balanced strings you can obtain.
 
 
 	Pseudo Code:
-	1. Get the input array and copy the elements to new array
-	2. Sort the elements of New array
-	3. Itreate through an array and Cmpare elements of given array with sorted new array
-	4. Increase the ctr if elemnts are not matching
-	5. return ctr at the end
+	1. Get the input array and initialise the rowCtr,sum=0
+	2. Iterate through the input array
+	3. CHeck for the condition.. If (Sum>=100) sum+=arr[i];
+	     else rowCtr++
+	 4. return rowCTr and sum as array
 
 
 
@@ -48,31 +50,33 @@ Return the maximum number of balanced strings you can obtain.
     public void allTests() {
 
         //Positive
-        Assert.assertEquals(2, heightChecker(new int[]{1, 3, 2, 4, 5}));
+        Assert.assertEquals(new int[] {3,60}, numberOfLines(new int[]{4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10},"bbbcccdddaaa"));
 
         //Negative
-        Assert.assertEquals(0, heightChecker(new int[]{1, 2, 3, 4, 5}));
+       /* Assert.assertEquals(0, heightChecker(new int[]{1, 2, 3, 4, 5}));
 
         //Edge
         Assert.assertEquals(5, heightChecker(new int[]{3, 6, 5, 4, 1}));
-        Assert.assertEquals(0, heightChecker(new int[]{1}));
+        Assert.assertEquals(0, heightChecker(new int[]{1}));*/
 
     }
 
-    public int heightChecker(int[] heights) {//O(N LogN)
+    public int[] numberOfLines(int[] widths, String s) {
+        int rowCtr=1,sum=0;
 
-        int[] expected = Arrays.copyOf(heights, heights.length); // Create a copy of heights
-        Arrays.sort(expected); // Sort the expected array in non-decreasing order
-
-        int count = 0;
-
-        for (int i = 0; i < heights.length; i++) {
-            if (heights[i] != expected[i]) {
-                count++;
+        for(int i=0;i<widths.length;i++)//90,5,7
+        {
+            sum+=widths[i];
+            if(sum>100)
+            {
+                rowCtr++;
+                sum = 0;
+                i--;
             }
         }
 
-        return count;
+        return new int[] {rowCtr,sum};
+
     }
 }
 

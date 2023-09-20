@@ -6,17 +6,18 @@ import org.junit.Test;
 import java.util.Arrays;
 
 
-public class Week12_Day1_HW_HeightChecker {
+public class Week12_Day2_HW_SplitBalancedString {
 
 	/* 
-Leetcode link: https://leetcode.com/problems/height-checker/description/
+Leetcode link: https://leetcode.com/problems/split-a-string-in-balanced-strings/description/
 
 Problem statement: 	
-A school is trying to take an annual photo of all the students. The students are asked to stand in a single file line in non-decreasing order by height. Let this ordering be represented by the integer array expected where expected[i] is the expected height of the ith student in line.
+Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
 
-You are given an integer array heights representing the current order that the students are standing in. Each heights[i] is the height of the ith student in line (0-indexed).
+Given a balanced string s, split it into some number of substrings such that:
 
-Return the number of indices where heights[i] != expected[i].
+Each substring is balanced.
+Return the maximum number of balanced strings you can obtain.
 
 
 	Input 			----->  int[]
