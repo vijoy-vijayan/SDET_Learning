@@ -13,6 +13,13 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
 	Input 			----->  int[],int
 	Output 			----->  int
 
+
+
+
+	return 2
+
+
+
 	Data Set:
 		 Positive: 	---> Input: [1,5,9,12,15],3			                Output =  1
 		 Positive: 	---> Input: [1,5,9,13,17,21],4                      Output =  4
@@ -27,8 +34,6 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
 	4. If any of the element satisfies the diff condition .. Set Flag to true
 	5. CHeck again for the difference in an other loop... If any element satisfies.. Increase the ctr
 	6. Return ctr at the end
-
-
 
 	 */
 
@@ -61,9 +66,24 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
        int ptr1=0,ptr2=0,ctr=0;
        boolean flag=false;
 
-       while(ptr1<=nums.length-2)
+       	/*
+       	[0,1,4,6,7,10], \ptr1-1, ptr2-4,6,7,10
+
+       	[0,1,4,6,7,10], \ptr1-1,ptr2-4 .....ptr3...6,7,10
+
+        0,1,4... 1,3 .....
+        0,4,6....4,2....
+        1,4,6...3,2
+        1,4,7... 3,3 .... 1
+        4,6,7... 2,1
+        4,7,10...3,3 ....2
+        6,7,10...1,3
+        */
+
+       while(ptr1<=nums.length-2)//ptr1=1 -- 1,4,6,7,10
        {
-           ptr2=ptr1+1;
+           ptr2=ptr1+1;//ptr2=
+
            flag=false;
 
            while(ptr2<nums.length)
