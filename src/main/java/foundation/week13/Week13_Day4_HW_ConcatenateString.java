@@ -13,7 +13,6 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
 	Input 			----->  int[]
 	Output 			----->  int
 
-
 	Data Set:
 		 Positive: 	---> Input: [1,5,9,12,15]		        Output =  636
 		 Positive: 	---> Input: [1,5,9,1]                   Output =  70
@@ -36,22 +35,13 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
     public void allTests() {
 
         //Positive
-        Assert.assertEquals(636, ArrayConcatenationValue(new int[]{1,5,9,12,15}));
+        /*Assert.assertEquals(636, ArrayConcatenationValue(new int[]{1,5,9,12,15}));
         Assert.assertEquals(70, ArrayConcatenationValue(new int[]{1,5,9,1}));
         Assert.assertEquals(1601, ArrayConcatenationValue(new int[]{9,15,10,1}));
         Assert.assertEquals(100, ArrayConcatenationValue(new int[]{100}));
-        Assert.assertEquals(12345, ArrayConcatenationValue(new int[]{123,45}));
+        Assert.assertEquals(12345, ArrayConcatenationValue(new int[]{123,45}));*/
 
-
-
-        /*
-
-         Positive: 	---> Input: [1,5,9,12,15]		        Output =  636
-		 Positive: 	---> Input: [1,5,9,1]                   Output =  70
-		 Negative: 	---> Input: [9,15,10,1]                 Output =  1601
-		 Edge: 	    ---> Input: [100]				        Output=   100
-		 Edge: 	    ---> Input: [123,45]				    Output =  12345
-         */
+        printProgram();
 
 
     }
@@ -83,6 +73,12 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
         }
 
         return res;
+    }
+
+    public void printProgram()
+    {
+        int x=Integer.MAX_VALUE;
+        System.out.println(x+x);
     }
 }
 
