@@ -78,5 +78,30 @@ Best Solution : https://leetcode.com/problems/determine-the-winner-of-a-bowling-
 
 
     }
+
+    public int isWinner_Siva(int[] player1, int[] player2) {
+        int player1Score = 0, player2Score = 0;
+        for (int i = 0; i < player1.length; i++) {
+            if(i == 1 && player1[i - 1] == 10)
+                player1Score += 2 * player1[i];
+            else if(i>=2 && (player1[i - 1] == 10 || player1[i - 2] == 10))
+                player1Score += 2 * player1[i];
+            else
+                player1Score += player1[i];
+
+            if(i == 1 && player2[i - 1] == 10)
+                player2Score += 2 * player2[i];
+            else if(i>=2 && (player2[i - 1] == 10 || player2[i - 2] == 10))
+                player2Score += 2 * player2[i];
+            else
+                player2Score += player2[i];
+        }
+        if(player1Score==player2Score)
+            return 0;
+        else
+            return (player1Score>player2Score) ? 1 : 2;
+    }
+
+
 }
 
