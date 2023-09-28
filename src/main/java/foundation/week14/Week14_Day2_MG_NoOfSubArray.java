@@ -61,12 +61,19 @@ Return the resulting palindrome string.
         for(;right<k;right++)
             sum+=arr[right];
 
+
+
         while(right<arr.length)
         {
 
             if(sum/k>=threshold)
                 ctr++;
+
             sum=sum+arr[right]-arr[right-k];right++;
+
+
+
+
         }
 
         if(sum/k>=threshold)

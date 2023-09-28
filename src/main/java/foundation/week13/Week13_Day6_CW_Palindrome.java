@@ -50,7 +50,7 @@ Leetcode link: https://leetcode.com/problems/find-the-array-concatenation-value/
 
         if (s.length() == 0)
             return false;
-        else if (s.length() == 0)
+        else if (s.length() == 1)
             return true;
         else {
             while (left <= right) {
