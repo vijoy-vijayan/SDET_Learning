@@ -15,7 +15,7 @@ public class MinimumDifference {
 
   */
 
-   
+
 
     public int minimumDifference(int[] nums, int k) {
 
