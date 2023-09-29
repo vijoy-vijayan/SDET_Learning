@@ -34,48 +34,33 @@ Leetcode link: https://leetcode.com/problems/find-all-anagrams-in-a-string/descr
     6. Check for the terminating condition
     7. Return the result
 
+Best Solution: https://leetcode.com/problems/reverse-string-ii/solutions/2609325/java-1ms-100-faster-99-less-memory-usage/ -- Skipped some iterations
 	 */
 
     @Test
     public void allTests() {
 
         Assert.assertEquals("roaneg",reverseString2("orange", 2));
-        Assert.assertEquals("nopyd",reverseString2("pondy", 3 ));
+        Assert.assertEquals("nopdy",reverseString2("pondy", 3 ));
         Assert.assertEquals("tnelis",reverseString2("silent",6	));
         Assert.assertEquals("a",reverseString2("a",1));
         Assert.assertEquals("roaneg",reverseString2("orange", 2));
 
-
-        /*
-
-             Positive: 	---> Input: "orange",2			        Output =  "roaneg"
-             Negative: 	---> Input: "pondy", 3                  Output =   "nopyd"
-             Edge: 	    ---> Input: "silent",6		            Output=   "tnelis"
-             Edge: 	    ---> Input: "a",1		                Output=   "a"
-
-         */
-
-
     }
 
     public String reverseString2(String s, int k) {
-
-        StringBuilder result = new StringBuilder();
-        StringBuilder temp = new StringBuilder();
         int ptr=0;
         boolean flag = true;
+        StringBuilder result = new StringBuilder(),temp = new StringBuilder();
 
         for (; ptr < s.length() - k; ptr = ptr + k) {
-
             temp.append(s.substring(ptr, ptr + k));
-
-            if (flag)
+            if (flag) // Flag to reverse the every 2nd Substring
                 temp.reverse();
 
             result.append(temp);
-
             flag = !flag;
-            temp.setLength(0);
+            temp.setLength(0); // Making temp to Empty
 
         }
         temp.append(s.substring(ptr, s.length()));
@@ -84,9 +69,5 @@ Leetcode link: https://leetcode.com/problems/find-all-anagrams-in-a-string/descr
             temp.reverse();
 
         return result.append(temp).toString();
-
     }
-
 }
-
-
