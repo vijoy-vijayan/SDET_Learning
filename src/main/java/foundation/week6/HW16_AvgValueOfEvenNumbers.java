@@ -68,6 +68,8 @@ An integer m is a divisor of n if there exists an integer k such that n = k * m.
 	public boolean hasExactlyThreeDivisors(int n) {
 		
 		int ctr=1;
+
+
 		
 		for (int i = 2; i <= n; i++) {
 			
