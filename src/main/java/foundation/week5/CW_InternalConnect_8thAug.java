@@ -8,7 +8,9 @@ import org.junit.Assert;
 
 public class CW_InternalConnect_8thAug {
 
-	/* 
+	/*
+
+Leet Code Link: https://leetcode.com/problems/calculate-money-in-leetcode-bank/description/
 
 Input: n = 4 == 0 Week  4 Days
 Output: 10
