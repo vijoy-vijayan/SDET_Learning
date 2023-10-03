@@ -33,9 +33,9 @@ Leetcode link: https://leetcode.com/problems/fair-candy-swap/
 	5. If yes, return both the elements of Bob and alice
 
 
-Best Solution :
+Best Solution : https://leetcode.com/problems/fair-candy-swap/solutions/3442225/brute-force-binary-search-hashmap/
 
-Learning: Should have implemented Set rather than the Map
+Learning: Could have improved the time complexity from m*n to m+n using Set
 
 
 	 */
