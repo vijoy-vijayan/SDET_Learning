@@ -1,5 +1,6 @@
 package foundation.week15;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -48,6 +49,8 @@ Best Solution :
     @Test
     public void allTests() {
 
+        Assert.assertEquals(1,majorityElement_FreqArray(new int[]{1,2,1,2,1,3,1,4,1,1}));
+
 
 
     }
@@ -75,7 +78,7 @@ Best Solution :
 
             currentElement = nums[i];
 
-            if (mapElemCount.containsKey(currentElement)) mapElemCount.put(currentElement, mapElemCount.get(currentChar) + 1);
+            if (mapElemCount.containsKey(currentElement)) mapElemCount.put(currentElement, mapElemCount.get(currentElement) + 1);
             else mapElemCount.put(currentElement, 1);
             
         }
@@ -93,8 +96,18 @@ Best Solution :
     }
 
 
-    public int majorityElement_FreqArray()
+    public int majorityElement_FreqArray(int[] nums)//Assumed the inputs are between 0 and 9
     {
+        int[] arrDigits=new int[10];
+
+        for(int i=0;i<nums.length;i++)
+            arrDigits[nums[i]]++;
+
+        for(int i=0;i<arrDigits.length;i++)
+            if(arrDigits[i]>=nums.length/2)
+                return i;
+
+        return -1;
 
     }
 }
