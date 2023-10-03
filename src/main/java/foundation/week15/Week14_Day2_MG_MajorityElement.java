@@ -98,7 +98,9 @@ Best Solution :
 
     public int majorityElement_FreqArray(int[] nums)//Assumed the inputs are between 0 and 9
     {
-        int[] arrDigits=new int[10];
+        int[] arrDigits=new int[10];//2,2,1,2,2,3 --> 6/2=3
+
+        // 0-0, 1-1, 2-4,3-1,......
 
         for(int i=0;i<nums.length;i++)
             arrDigits[nums[i]]++;
