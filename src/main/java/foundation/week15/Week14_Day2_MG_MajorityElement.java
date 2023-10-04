@@ -58,10 +58,10 @@ Best Solution :
     public int majorityElement_AverageLogic(int[] nums) {
 
         if(nums.length==1)
-            return nums[0];
+            return nums[0];//1,2,3,4,4,4,4
 
-        Arrays.sort(nums);
-        int avg=nums.length/2;
+        Arrays.sort(nums);///2,3,3
+        int avg=nums.length/2;//1
         return nums[avg];
     }
 
@@ -82,7 +82,6 @@ Best Solution :
             else mapElemCount.put(currentElement, 1);
             
         }
-
         int avg=nums.length/2;
 
        for(Map.Entry<Integer,Integer> es:mapElemCount.entrySet())
