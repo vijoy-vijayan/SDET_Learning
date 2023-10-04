@@ -3,6 +3,7 @@ package foundation.week14;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 
@@ -63,6 +64,8 @@ Given a string, validate you have all the characters of a-z
     }
 
     public boolean checkLowerCase_HashSet(String s) {
+
+
 
         HashSet tempSet = new HashSet<Character>();
 
