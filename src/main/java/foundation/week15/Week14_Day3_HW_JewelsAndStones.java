@@ -67,8 +67,6 @@ Learning:
             if(mapStones.get(jewels.charAt(i))!=null)
                 sum+=mapStones.get(jewels.charAt(i));
         }
-
-
         return sum;
     }
 

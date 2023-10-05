@@ -55,15 +55,22 @@ Learning:
 
         boolean[] res=new boolean[26];
 
-        for (int i = 0; i < sentence.length(); i++) {
+        for (int i = 0; i < sentence.length(); i++)
             res[sentence.charAt(i)-'a']=true;
-        }
+
 
         for (int i = 0; i < res.length; i++) { if(!res[i])return false; }
-
-
-
         return true;
+    }
+
+    public boolean isPangram_HashSet(String sentence) {
+
+        HashSet<Character> setAlphabets=new HashSet<>();
+
+        for (int i = 0; i < sentence.length(); i++)
+            setAlphabets.add(sentence.charAt(i));
+
+        return setAlphabets.size()==26;
     }
 
 
