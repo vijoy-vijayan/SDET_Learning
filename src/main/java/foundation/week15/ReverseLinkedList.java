@@ -9,8 +9,6 @@ public class ReverseLinkedList {
 
     public ListNode reverseList(ListNode head) {
 
-        ArrayList<Integer> temp=new ArrayList<>();
-        temp.add(5);
         if(head == null) return  null;
         if(head.next == null) return head;
 
@@ -60,7 +58,7 @@ public class ReverseLinkedList {
     }*/
     @Test
     public void test1(){
-        ListNode head = reverseList1(new SinglyLinkedList().add(new int[]{3,5,7}));
+        ListNode head = reverseList(new SinglyLinkedList().add(new int[]{3,5,7}));
         String a = new SinglyLinkedList().print(head);
         System.out.println(a);
         Assert.assertEquals("[7,5,3]", a);
