@@ -5,7 +5,6 @@ public class ListNode {
     ListNode next;
     int val;
 
-
     // 3,5,7
 
 

@@ -37,6 +37,7 @@ public class SinglyLinkedList {
        }
      */
 
+    ///3,null
     public void add(int value){
         if(head == null)  // we are trying to add the first element
             head = tail = new ListNode(value);
@@ -47,6 +48,9 @@ public class SinglyLinkedList {
         }
         size++;
     }
+
+
+
 
     public ListNode add(int[] value){
         for(int each : value) add(each);
