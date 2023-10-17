@@ -3,6 +3,8 @@ package foundation.week17;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 
@@ -81,18 +83,16 @@ Learning: Could use Math class functions min and max if applicable
         int sum = 0;
 
         for (int i = 0; i < tickets.length; i++) {
-            if(i>k)
-            {
-                if(tickets[i]<tickets[k])
-                    sum+=tickets[i];
+            if (i > k) {
+                if (tickets[i] < tickets[k])
+                    sum += tickets[i];
                 else
-                    sum+=tickets[k]-1;
-            }
-            else {
-                if(tickets[i]<tickets[k])
-                    sum+=tickets[i];
+                    sum += tickets[k] - 1;
+            } else {
+                if (tickets[i] < tickets[k])
+                    sum += tickets[i];
                 else
-                    sum+=tickets[k];
+                    sum += tickets[k];
             }
 
 
@@ -100,6 +100,37 @@ Learning: Could use Math class functions min and max if applicable
 
         return sum;
 
+    }
+
+    public int timeToBuyTicket(int[] tickets, int k) {
+        int n = tickets.length;
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 0; i < n; i++) {
+            queue.add(tickets[i]);
+        }
+
+        int time = 0;
+
+        while (true) {
+            int frontPersonTickets = queue.poll();
+
+            if (frontPersonTickets > 1) {
+                queue.add(frontPersonTickets - 1);
+            }
+
+            time++;
+
+            if (frontPersonTickets == 1 && k == 0) {
+                break;
+            } else if (k == 0) {
+                k = queue.size() - 1;
+            } else {
+                k--;
+            }
+        }
+
+        return time;
     }
 }
 
