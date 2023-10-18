@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 
 public class Week17_Day2_HW_BackSpaceStringCompare {
@@ -91,6 +92,26 @@ Learning: Stack Methods and its applications
         }
 
         return res1.toString().equals(res2.toString());
+    }
+
+
+    public boolean backspaceCompare_BestCode(String S, String T) {
+        return stackSolution(S).equals(stackSolution(T));
+    }
+
+    private String stackSolution(String str) {
+        Stack<Character> stack = new Stack<Character>();
+
+        for (char c : str.toCharArray()) {
+
+            if (c != '#') {
+                stack.push(c);
+
+            } else if (!stack.isEmpty()) {
+                stack.pop();
+            }
+        }
+        return stack.toString();
     }
 
 }
